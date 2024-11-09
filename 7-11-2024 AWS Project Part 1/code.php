@@ -27,14 +27,6 @@ echo "User data has been successfully stored in the database.<br>";
 } else {
 echo "Error: " . $sql . "<br>" . $conn->error;
 }
-$uploadDir = '/var/udc/uploads/';
-$uploadFile = $uploadDir . basename($_FILES['userfile']['name']);
-if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadFile)) {
-echo "File is valid, and it has been successfully uploaded.<br>";
-} else {
-echo "File upload failed.<br>";
-}
-
 }
 ?>
 <h2>Enter User Information</h2>
@@ -42,7 +34,6 @@ echo "File upload failed.<br>";
 Name: <input type="text" name="name"><br>
 Age: <input type="number" name="age"><br>
 Country: <input type="text" name="country"><br>
-File Upload: <input type="file" name="userfile"><br>
 <input type="submit" value="Submit">
 </form>
 <?php
