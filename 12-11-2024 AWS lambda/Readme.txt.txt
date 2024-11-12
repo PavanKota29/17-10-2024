@@ -1,0 +1,1 @@
+today i learned about lambda function. 
